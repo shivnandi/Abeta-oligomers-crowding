@@ -1,0 +1,49 @@
+# README for secondary_structure.f90
+
+## Reference
+This program evaluates secondary structure data obtained using the STRIDE algorithm in VMD.
+For details on STRIDE, refer to the VMD manual
+
+
+## Description
+This Fortran 90 program processes the output data obtained from VMD after running the STRIDE algorithm. It categorizes the secondary structures into:
+- Coil: Output files `fort.11`, `fort.12`, ..., corresponding to the number of protein chains.
+- Turn: Output files `fort.21`, `fort.22`, ...
+- Beta Sheet: Output files `fort.31`, `fort.32`, ...
+- Alpha Helix: Output files `fort.41`, `fort.42`, ...
+
+Additional secondary structure classifications can be modified within the program.
+
+## Compilation and Execution
+To compile the code using 'gfortran':
+
+gfortran secondary_structure.f90 -o secondary_structure
+
+
+To run the compiled program:
+
+    ./secondary_structure
+
+
+The input data file should be named 'ss.txt' and should be present in the same directory as the executable. You can change that in code also.
+
+## Output
+The program generates multiple output files ('fort.*'), where each file corresponds to a different secondary structure type for each protein chain. If you have four protein chains, the following files will be created:
+
+- Coil : 'fort.11', 'fort.12', 'fort.13', 'fort.14'
+- Turn: 'fort.21', 'fort.22', 'fort.23', 'fort.24'
+- Beta Sheet: 'fort.31', 'fort.32', 'fort.33', 'fort.34'
+- Alpha Helix: 'fort.41', 'fort.42', 'fort.43', 'fort.44'
+- You can take the average and fraction of secondary structure later.
+
+Other secondary structure types can be added or modified in the Fortran code as needed.
+
+## Notes
+- Ensure 'ss.txt' is formatted correctly with secondary structure data from VMD.
+- Modify the code as required to process additional secondary structure classifications.
+- The output file naming convention follows the pattern 'fort.XY', where:
+  - 'X' indicates the secondary structure type (1 = Coil, 2 = Turn, 3 = Beta Sheet, 4 = Alpha Helix).
+  - 'Y' represents the protein chain index.
+
+
+For further modifications, refer to the VMD STRIDE documentation and adjust the Fortran logic accordingly.
