@@ -1,1 +1,61 @@
+# README for Tetrahedral Order Calculation
+
+## Description
+This setup consists of two scripts:
+1. bash_qtet.sh: A bash script to process the trajectory and compute qtet values.
+2. qtet.sh : A script to execute the qtet calculation using 'qtet.f90' .
+
+The bash script will:
+- Extract trajectory frames in '.gro' format.
+- Run the 'qtet.f90' Fortran program to compute the qtet values for each water molecule.
+- Save the results in an output file.
+
+## Variables to Modify in 'bash_qtet.sh'
+Modify these values according to your system:
+
+tpr="prod.tpr"
+gro="prod.gro"
+xtc="traj.xtc"
+exe="gmx"
+r="0.5" -- distance of first solvation shell
+out="qtet_water_ave.dat" -- output file name
+frame="50000" -- total number of frames
+```
+
+## Execution Steps
+1. Remove existing output file (if any)
+   Remove pre-existing output file with the same name before execution.
+
+2. **Frame Time Calculation**
+   The time for each frame is computed as:
+   
+   time=$((i * 10))
+  
+   where one frame corresponds to 10 ps (modify it according to system).
+
+3. Processing Steps in 'bash_qtet.sh'
+   - Extracts trajectory frames in '.gro' format.
+   - Runs 'qtet.f90' using 'gfortran'.
+   - Computes qtet for each water molecule.
+   - Saves results in 'qtet_water_ave.dat'.
+
+## Execution
+
+To run the bash script:
+
+    bash bash_qtet.sh 
+
+
+## Output File
+The computed qtet values will be written to:
+- qtet_water_ave.dat
+
+## Notes
+- Modify 'qtet.f90' for computing the average qtet per frames.
+- Ensure 'gfortran' is installed for compiling the Fortran code.
+- Ensure 'GROMACS' is installed properly.
+- The '.gro' file should be formatted correctly to match the trajectory extraction.
+
+For any modifications, update 'qtet.f90' and 'bash_qtet.sh' accordingly.
+
 
