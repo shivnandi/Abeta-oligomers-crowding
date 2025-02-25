@@ -1,0 +1,43 @@
+# README: Preferential Binding Coefficient Calculation
+
+## Overview
+This program calculates the preferential binding coefficient using Equation 56 from the following reference:
+> DOI: [10.1007/s12013-007-9005-0](https://doi.org/10.1007/s12013-007-9005-0)
+
+The program is written in Fortran and utilizes the cumulative number (-cn) obtained from `gmx rdf` using GROMACS 2021.4.
+
+## Input Files
+The program requires two input files in '.xvg' format:
+1. cn_crowder.xvg – Cumulative number of the crowder molecules.
+2. cn_water.xvg – Cumulative number of water molecules.
+
+These files should be located in the same directory as the executable.
+
+## Compilation & Execution
+Ensure you have 'gfortran' installed before compiling the program.
+
+### Compilation:
+
+ gfortran pfc.f90 
+
+
+### Running the Program:
+
+ ./a.out
+
+
+## Output
+The program generates an output file named:
+- output_pref_binding.txt  – Contains the calculated preferential binding coefficient values.
+
+## Dependencies
+- GCC (GNU Compiler Collection)
+- gfortran (Fortran compiler)
+- GROMACS 2021.4 (or any other version) (for generating input files using 'gmx rdf -cn')
+
+## Notes
+- Ensure that the input files are formatted correctly in '.xvg' format.
+- Modify the Fortran source code if necessary to adjust file paths or calculation parameters.
+
+For any issues or questions, refer to the cited reference or documentation of 'gmx rdf'. Happy computing!
+
