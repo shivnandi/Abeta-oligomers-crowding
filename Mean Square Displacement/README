@@ -1,0 +1,35 @@
+# README for MSD Calculation Code
+
+## Description
+This Fortran program calculates the Mean Squared Displacement (MSD) of water molecules in a Molecular Dynamics (MD) simulation. The code processes coordinate data of oxygen atoms from water molecules across multiple frames and computes the MSD.
+
+## Variables to Modify
+- num_mol : Number of water molecules in the system.
+- num_frames : Number of frames to process.
+
+## Input File
+The input file should contain the coordinates of oxygen atoms of water molecules at each frame. The default input file name is 'all_oxygen.gro' created using GROMACS 2021.4 software, but this can be changed in the code if necessary.
+
+## Output File
+The calculated MSD data will be written to 'fort.500'.
+
+## Compilation and Execution
+To compile the code using 'gfortran':
+
+    gfortran msd.final -o msd_final
+
+
+To run the compiled program:
+
+    ./msd_final
+
+
+Ensure that the input file 'all_oxygen.gro' is in the same directory before execution.
+
+## Notes
+- Modify 'num_mol' and 'num_frames' within the Fortran code as needed.
+- Ensure that the '.gro' file is correctly formatted with oxygen atom coordinates for accurate MSD computation.
+- The output file 'fort.500' will contain the computed MSD values.
+
+For further modifications, adjust the Fortran logic accordingly.
+
