@@ -4,7 +4,7 @@
 # README for Research Code Repository
 
 ## Overview
-This GitHub repository contains all the codes used to calculate the properties in the study titled:
+This GitHub repository contains all the codes used to calculate the properties.
 
 
 
