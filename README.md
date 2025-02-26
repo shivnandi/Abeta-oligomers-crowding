@@ -1,4 +1,4 @@
-# Abeta-oligomers-crowding
+#  "Impact of Crowder Size, Hydrophobicity, and Hydration on the Structure of Amyloid-β Oligomers"
 
 
 # README for Research Code Repository
@@ -6,7 +6,7 @@
 ## Overview
 This GitHub repository contains all the codes used to calculate the properties in the study titled:
 
-## "Impact of Crowder Size, Hydrophobicity, and Hydration on the Structure of Amyloid-β Oligomers"
+
 
 The repository includes scripts and programs for computing key molecular properties from molecular dynamics (MD) simulations.
 
