@@ -6,7 +6,7 @@
 ## Overview
 This GitHub repository contains all the codes used to calculate the properties in the study titled:
 
-"Impact of Crowder Size, Hydrophobicity, and Hydration on Aβ(16−22) Oligomers Structural Stability"
+"Impact of Crowder Size, Hydrophobicity, and Hydration on the Structure of Amyloid-β Oligomers"
 
 The repository includes scripts and programs for computing key molecular properties from molecular dynamics (MD) simulations.
 
@@ -36,10 +36,12 @@ Ensure required input files are present before execution.
 ## License
 This repository is released under the **MIT License**. You are free to use, modify, and distribute the code with proper attribution.
 
-## Citation
-If you use these codes in your research, please cite the study:
-> "Impact of Crowder Size, Hydrophobicity, and Hydration on Aβ(16−22) Oligomers Structural Stability."
+## Citation  
+If you use these codes in your research, please cite the study:  
+> **"Impact of Crowder Size, Hydrophobicity, and Hydration on the Structure of Amyloid-β Oligomers"**  
+> *Shivnandi, Divya Nayar*  
 
-For any issues or contributions, feel free to submit a pull request or raise an issue in the repository.
+For any issues or contributions, feel free to submit a pull request or raise an issue in the repository.  
+
 
 
