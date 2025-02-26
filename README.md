@@ -1,4 +1,4 @@
-# A-beta-oligomers-study-with-Molecular-Crowders
+# Abeta-oligomers-crowding
 
 
 # README for Research Code Repository
