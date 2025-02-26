@@ -1,4 +1,5 @@
-# Amyloid-beta-with-Molecular-Crowders
+# Amyloid-beta-oligomers-study-with-Molecular-Crowders
+
 # README for Research Code Repository
 
 ## Overview
